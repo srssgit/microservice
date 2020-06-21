@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  application:
+    name: organization-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect 
+
+      
+management.endpoints.web.exposure.include: refresh
+        
+server.port: 8087
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      defalutZone: http://localhost:8761
+      
+   
+      
+      
